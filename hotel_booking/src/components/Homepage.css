@@ -1,0 +1,183 @@
+.homepage {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 16px;
+    background-image: url('hotel2.avif'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(6, 0, 0);  /* Text color for contrast */
+    font-style: italic; /* Italicize the text */
+    position: relative;
+    overflow: hidden;
+}
+
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    max-width: 1000px;
+    width: 100%;
+    justify-content: center;
+    transition: filter 0.3s ease; /* Transition effect */
+}
+.rooms-grid.blur {
+    filter: blur(5px); /* Apply blur to the grid */
+}
+.room-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.room-card {
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light white border */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+    backdrop-filter: blur(10px); /* Blurry effect behind the grid */
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-style: italic; /* Italic text inside the card */
+}
+
+.room-card:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly increase opacity on hover */
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px); /* Blur the background */
+}
+
+
+.modal {
+    position: fixed;
+    background: rgba(255, 255, 255, 0); /* Completely transparent */
+    padding: 24px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    max-height:80% ;
+    text-align: left;
+    position: relative;
+    backdrop-filter: blur(10px); /* Blurs the background behind the modal */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: subtle border to define the modal */
+}
+
+.room-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.modal h2, .modal p {
+    color: rgb(223, 9, 9); /* Change text color for visibility against transparent background */
+    font-style: italic; /* Italicize text */
+}
+
+.book-now {
+    background-color: rgba(76, 175, 80, 0.7); /* Semi-transparent green */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.book-now:hover {
+    background-color: rgba(76, 175, 80, 1); /* More opaque on hover */
+}
+
+.close-button {
+    background-color: rgba(231, 76, 60, 0.7); /* Semi-transparent red */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.2s;
+}
+
+.close-button:hover {
+    background-color: rgba(231, 76, 60, 1); /* More opaque on hover */
+}
+/* Styles for the date input fields */
+input[type="date"] {
+    margin: 10px 0;            /* Add space above and below the input */
+    padding: 10px;             /* Add padding inside the input */
+    width: calc(100% - 20px);  /* Full width minus padding */
+    border: 1px solid #ccc;    /* Light gray border */
+    border-radius: 5px;        /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: border-color 0.3s; /* Smooth transition for focus effect */
+}
+
+/* Change border color on focus */
+input[type="date"]:focus {
+    border-color: #4CAF50;      /* Green border on focus */
+    outline: none;               /* Remove default outline */
+}
+
+/* Styles for the error message */
+.error {
+    color: red;                  /* Red color for error messages */
+    font-weight: bold;           /* Bold font for emphasis */
+    margin-top: 10px;           /* Space above the error message */
+}
+
+/* Adjusting button styles */
+.book-now, .close-button {
+    margin-top: 10px;           /* Space above buttons */
+    padding: 10px 15px;         /* Padding inside buttons */
+    border: none;                /* Remove default border */
+    border-radius: 5px;         /* Rounded corners */
+    cursor: pointer;             /* Pointer cursor on hover */
+    font-weight: bold;           /* Bold font for buttons */
+}
+
+/* Specific styles for booking buttons */
+.book-now {
+    background-color: #4CAF50; /* Green background for booking button */
+    color: white;               /* White text color */
+}
+
+.close-button {
+    background-color: #f44336; /* Red background for close button */
+    color: white;               /* White text color */
+}
+.labeld{
+    color: rgb(223, 9, 9); /* Red color */
+    font-weight: bold; /* Optional: make it bold */
+    margin: 10px 0; /* Optional: add margin for spacing */
+}
+.labeli{
+    color: rgb(23, 236, 30); /* Red color */
+    font-weight: bold; /* Optional: make it bold */
+    margin: 10px 0; /* Optional: add margin for spacing */
+}
+.roomtext{
+    color: aqua;
+}
+.roompricetext{
+    color: aqua;
+}
